@@ -2,14 +2,22 @@
 GET http://localhost:13000/setup
 ###
 
-GET http://localhost:13000
+GET http://localhost:13000/users
 
 ###
-POST http://localhost:13000
+POST http://localhost:13000/register
 Content-Type: application/json
 
 {
     "name":"hola",
     "userName" : "Mun",
+    "password":"do"
+}
+###
+POST http://localhost:13000/login
+Content-Type: application/json
+
+{
+    "userName" : "run",
     "password":"do"
 }
