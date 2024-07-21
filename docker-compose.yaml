@@ -6,7 +6,21 @@ services:
       POSTGRES_PASSWORD: password123
       POSTGRES_USER: user123
       POSTGRES_DB: db123
-  app:
-    image: my-node-app
+    volumes:
+      - ./sql:/docker-entrypoint-initdb.d
     ports:
-      - 13000:3000
+      - "5432:5432"
+
+  app:
+    build:
+      context: .
+    ports:
+      - "13000:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
+      DATABASE_USER: user123
+      DATABASE_PASSWORD: password123
+      DATABASE_NAME: db123

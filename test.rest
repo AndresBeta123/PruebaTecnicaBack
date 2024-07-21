@@ -1,6 +1,4 @@
 ###
-GET http://localhost:13000/setup
-###
 
 GET http://localhost:13000/users
 

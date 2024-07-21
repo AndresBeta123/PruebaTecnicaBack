@@ -59,16 +59,5 @@ app.post('/register', async (req, res) => {
     }
 });
 
-app.get('/setup', async (req, res) => {
-    try {
-        await pool.query('CREATE TABLE IF NOT EXISTS users (id SERIAL PRIMARY KEY, name VARCHAR(100), userName VARCHAR(100) UNIQUE, password VARCHAR(250))');
-        res.status(200).json({
-            message: "Table created successfully"
-        });
-    } catch (err) {
-        console.log(err);
-        res.sendStatus(500);
-    }
-});
 
 app.listen(port, () => console.log(`Server has started on port: ${port}`));
