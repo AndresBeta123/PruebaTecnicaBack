@@ -1,0 +1,22 @@
+-- Agregar datos a la tabla restaurants--
+INSERT INTO restaurants (restaurant_name, city) VALUES
+('La Bella Napoli', 'Naples'),
+('Trattoria Da Vinci', 'Rome'),
+('Il Forno', 'Florence'),
+('Osteria Le Torri', 'Milan'),
+('Ristorante Roma', 'Venice'),
+('Pizzeria Margherita', 'Naples'),
+('Ristorante Toscana', 'Florence'),
+('La Trattoria', 'Rome'),
+('Osteria del Sole', 'Venice'),
+('Ristorante Milanese', 'Milan'),
+('Bistro Napolitano', 'Naples'),
+('Trattoria Fiorentina', 'Florence'),
+('La Dolce Vita', 'Rome'),
+('Ristorante San Marco', 'Venice'),
+('Pizzeria Milano', 'Milan'),
+('Trattoria del Vino', 'Naples'),
+('Osteria del Ponte', 'Florence'),
+('Ristorante Al Dente', 'Rome'),
+('Pizzeria del Sole', 'Venice'),
+('Osteria Napolitana', 'Milan');

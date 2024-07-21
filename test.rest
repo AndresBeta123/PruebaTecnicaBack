@@ -1,5 +1,4 @@
 ###
-
 GET http://localhost:13000/users
 
 ###
@@ -11,11 +10,32 @@ Content-Type: application/json
     "userName" : "Mun",
     "password":"do"
 }
+
 ###
 POST http://localhost:13000/login
 Content-Type: application/json
 
 {
-    "userName" : "run",
+    "userName" : "Mun",
     "password":"do"
 }
+###
+GET http://localhost:13000/sessions
+
+###
+GET http://localhost:3000/auth-status
+Content-Type: application/json
+
+{
+    "message": "Authenticated"
+}
+
+###
+POST http://localhost:3000/logout
+{
+    "message": "Authenticated"
+}
+###
+GET http://localhost:13000/Restaurants
+###
+GET http://localhost:13000/AllLogs
